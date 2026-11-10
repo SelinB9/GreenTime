@@ -3,4 +3,13 @@
 GET {{greentime_HostAddress}}/weatherforecast/
 Accept: application/json
 
-###
+### post ile token oluşturalım
+POST {{greentime_HostAddress}}/api/auth/test-token
+
+### 1. korumalı alana tokensız istek at (swagerrda yaptığın gibi 401 dönecek)
+GET {{greentime_HostAddress}}/api/auth/secure-data
+
+### 2.Korumalı alana token ile istek atıcam 200 dönmeli
+GET {{greentime_HostAddress}}/api/auth/secure-data
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJhODg4NTllNi1mNDdjLTQ5ZGQtOGEyYi1iMmM2Yzc0NzgxMGUiLCJlbWFpbCI6InNlbGluQGdyZWVudGltZS5jb20iLCJuYmYiOjE3OTI3MzA4MjMsImV4cCI6MTc5MzMzNTYyMywiaWF0IjoxNzkyNzMwODIzLCJpc3MiOiJHcmVlblRpbWVCYWNrZW5kIiwiYXVkIjoiR3JlZW5UaW1lTW9iaWxlIn0.DVFyRDvTRGF24nKmTys2oT6UqCy_E6WRnqs8PyGtVXc
+

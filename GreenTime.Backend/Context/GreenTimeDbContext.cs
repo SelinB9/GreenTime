@@ -14,6 +14,6 @@ public class GreenTimeDbContext : DbContext
 
     //DbSet'ler 
     public DbSet<User> Users { get; set; }
-    public DbSet<CuratedPlaylist> CurratedPlaylists { get; set; }
+    public DbSet<CuratedPlaylist> CuratedPlaylists { get; set; }
     public DbSet<CuratedVideo> CuratedVideos { get; set; }
 }
